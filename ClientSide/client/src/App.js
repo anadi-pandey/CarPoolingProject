@@ -5,6 +5,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import GetEmps from './Components/GetEmps';
 import Login from './Components/Login';
 import RegUser from './Components/RegUser';
+import LandingPage from './Components/LandingPage';
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
       </ul>
       <header className="App-header">
         <Routes>
+          <Route path="/Main" element={<LandingPage/>}></Route>
         <Route path='/RegForm' element={<RegForm/>}></Route>
           <Route path='/Reg' element={<RegUser/>}></Route>
           <Route  path='/GetEmps' element={<GetEmps/>}></Route>

@@ -35,7 +35,6 @@ let Login=()=>{
     let submitForm=(e)=>
     {
         e.preventDefault();
-
         let reqOptions={
             method:'POST',
             headers:{'content-type':'application/json'},
@@ -43,8 +42,7 @@ let Login=()=>{
         };
         fetch("http://localhost:8080/vlogin",reqOptions)
         .then(res=>res.text())
-        .then(data=>{if(data.length>2) navigate("/GetEmps") ; else setMsg("WRONG EMAIL OR PASSWORD") })
-        console.log(msg);
+        .then(data=>{if(data.length>2) navigate("/Main") ; else setMsg("WRONG EMAIL OR PASSWORD") })
     }
 
 
