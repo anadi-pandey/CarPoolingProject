@@ -38,9 +38,9 @@ let Login=()=>{
         let reqOptions={
             method:'POST',
             headers:{'content-type':'application/json'},
-            body:JSON.stringify({email:user.email, pwd:user.pwd})
+            body:JSON.stringify({login_id:user.email, password:user.pwd})
         };
-        fetch("http://localhost:8080/vlogin",reqOptions)
+        fetch("http://localhost:8080/checkLogin",reqOptions)
         .then(res=>res.text())
         .then(data=>{if(data.length>2) navigate("/Main") ; else setMsg("WRONG EMAIL OR PASSWORD") })
     }

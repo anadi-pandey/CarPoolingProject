@@ -16,13 +16,12 @@ function App() {
       </ul>
       <header className="App-header">
         <Routes>
-          <Route path="/Main" element={<LandingPage/>}></Route>
         <Route path='/RegForm' element={<RegForm/>}></Route>
           <Route path='/Reg' element={<RegUser/>}></Route>
           <Route  path='/GetEmps' element={<GetEmps/>}></Route>
           <Route path="/" element={<Login/>}></Route>
+          <Route path="/Main" element={<LandingPage/>}></Route>
         </Routes>
-
       </header>
     </div>
   );
